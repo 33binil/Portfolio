@@ -146,7 +146,7 @@ const Home = () => {
 
     // Lottie Options
     const lottieOptions = {
-        src: "https://lottie.host/58753882-bb6a-49f5-a2c0-950eda1e135a/NLbpVqGegK.lottie",
+        src: "https://lottie.host/3c34a576-f594-41a9-be4b-af235d03a8e1/CIXMc0Smtn.lottie",
         loop: true,
         autoplay: true,
         rendererSettings: {
@@ -209,7 +209,7 @@ const Home = () => {
                             data-aos-delay="1400"
                         >
                             <CTAButton
-                                href="#Portofolio"
+                                href="#showcase"
                                 text="Projects"
                                 icon={ExternalLink}
                             />
@@ -222,7 +222,10 @@ const Home = () => {
                     </div>
 
                     {/* Sidebar Social Icons */}
-                    <aside className="fixed left-8 bottom-12 flex flex-col gap-6 text-gray-400">
+                    <aside className="fixed flex flex-col gap-6 text-gray-400
+                   left-7 bottom-7
+                   md:left-14 md:bottom-12
+                   z-50">
                         <a
                             href="https://github.com/33binil"
                             target="_blank"
@@ -239,7 +242,6 @@ const Home = () => {
                         >
                             <Linkedin size={30} />
                         </a>
-                        {/* Changed from X to WhatsApp */}
                         <a
                             href="https://wa.me/917902931503"
                             target="_blank"
@@ -257,6 +259,7 @@ const Home = () => {
                             <Instagram size={30} />
                         </a>
                     </aside>
+
 
                     {/* Right */}
                     <div

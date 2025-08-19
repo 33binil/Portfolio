@@ -6,49 +6,50 @@ export default function WhatIDo() {
 
     const items = [
         {
-            title: "DESIGN",
+            title: "WEB DEVELOPMENT",
             description:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quia aliquid laboriosam ducimus sit molestiae.",
+                "I build responsive, scalable, and interactive web applications with a focus on clean code and seamless user experience. I combine frontend and backend expertise to deliver complete, modern web solutions.",
             skills: [
-                "Blender",
-                "Zbrush",
-                "UI Design",
-                "Motion",
-                "Rigging",
-                "3D Animation",
-                "Character Design",
-                "Modelling",
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "React.js",
+                "Next.js",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Tailwind CSS",
+                "REST APIs",
+                "Git & GitHub",
+                "Responsive Design",
             ],
         },
         {
-            title: "DEVELOP",
+            title: "UI/UX DESIGN",
             description:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quia aliquid laboriosam ducimus sit molestiae.",
+                "I create intuitive and visually appealing digital experiences, focusing on user-centered design principles. From wireframing and prototyping to interactive interfaces, I ensure every design is responsive, accessible, and engaging.",
             skills: [
-                "JavaScript",
-                "TypeScript",
-                "Three.js",
-                "React",
-                "CSS",
-                "Node.js",
-                "Next.js",
-                "Express.js",
-                "PHP",
-                "MySQL",
+                "User Research",
+                "Interaction Design",
+                "Visual Design",
+                "Responsive Design",
+                "Figma",
+                "Tailwind CSS",
+                "React UI Implementation",
             ],
         },
     ];
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 px-10 py-20">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start gap-16 px-6 sm:px-10 py-20">
             {/* LEFT SIDE — TITLE */}
             <div
-                className="relative left-64"
+                className="relative md:left-64"
                 data-aos="fade-right"
                 data-aos-duration="1200"
                 data-aos-easing="ease-out-cubic"
             >
-                <h2 className="relative font-sans font-bold text-8xl leading-tight">
+                <h2 className="relative font-sans font-bold text-6xl sm:text-7xl lg:text-8xl leading-tight">
                     WHAT
                     <div>
                         I<span className="font-bold text-[#c2a4ff]"> DO</span>
@@ -58,7 +59,7 @@ export default function WhatIDo() {
 
 
             {/* RIGHT SIDE — BOXES */}
-            <div className="relative left-[-400px] flex flex-col top-[-100px] gap-8 w-full max-w-[500px]">
+            <div className="relative md:left-[-400px] flex flex-col md:top-[-100px] gap-8 w-full max-w-[500px]">
                 {items.map((item, i) => (
                     <div
                         key={i}

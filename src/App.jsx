@@ -13,19 +13,31 @@ function App() {
     const [showWelcome, setShowWelcome] = useState(true);
 
     return (
-        <div className="bg-[#030014] text-white">
+        <div className="bg-[#030014] text-white scroll-smooth">
             {showWelcome ? (
                 <Welcome onLoadingComplete={() => setShowWelcome(false)} />
             ) : (
                 <>
                     <Navbar />
                     <Background />
-                    <Home />
-                    <About />
-                    <WhatIDo />
-                    <Career />
-                    <Showcase />
-                    <Contact />
+                    <section id="home">
+                        <Home />
+                    </section>
+                    <section id="about">
+                        <About />
+                    </section>
+                    <section id="whatido">
+                        <WhatIDo />
+                    </section>
+                    <section id="career">
+                        <Career />
+                    </section>
+                    <section id="showcase">
+                        <Showcase />
+                    </section>
+                    <section id="contact">
+                        <Contact />
+                    </section>
                 </>
             )}
         </div>

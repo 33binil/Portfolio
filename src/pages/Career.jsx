@@ -68,27 +68,27 @@ export default function Career() {
     return (
         <section
             id="career-section"
-            className="relative w-full min-h-screen text-white px-8 md:px-20 py-32"
+            className="relative w-full min-h-screen text-white px-6 md:px-20 py-32"
         >
             {/* Heading */}
-            <div className="text-center mb-44">
+            <div className="text-center mb-20 md:mb-44">
                 <h2
                     data-aos="fade-down"
                     data-aos-duration="1000"
                     className="inline-block text-3xl md:text-6xl font-bold text-center mx-auto text-transparent bg-clip-text"
                 >
-          <span
-              style={{
-                  color: "#6366f1",
-                  backgroundImage:
-                      "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-              }}
-          >
-            My Career & Experience
-          </span>
+                    <span
+                        style={{
+                            color: "#6366f1",
+                            backgroundImage:
+                                "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
+                            WebkitBackgroundClip: "text",
+                            backgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                        }}
+                    >
+                        My Career & Experience
+                    </span>
                 </h2>
 
                 <p
@@ -100,8 +100,48 @@ export default function Career() {
                 </p>
             </div>
 
-            {/* Timeline Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+            {/* Mobile Layout */}
+            <div className="md:hidden relative">
+                {/* Timeline Line */}
+                <div
+                    className="absolute left-4 top-0 w-[3px] bg-gradient-to-b from-purple-500 via-purple-400 to-transparent"
+                    style={{ height: `${scrollProgress * 100}%` }}
+                ></div>
+
+                {/* Glowing Circle */}
+                <div
+                    className="absolute left-[2px] w-6 h-6 rounded-full bg-purple-500 animate-pulse"
+                    style={{
+                        top: `${scrollProgress * 100}%`,
+                        transform: "translateY(-50%)",
+                        boxShadow:
+                            "0 0 20px rgba(168,85,247,0.9), 0 0 40px rgba(168,85,247,0.6), 0 0 60px rgba(168,85,247,0.4)",
+                    }}
+                ></div>
+
+                {/* Experience Cards */}
+                <div className="flex flex-col gap-16 pl-12">
+                    {experiences.map((exp, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{
+                                opacity: scrollProgress > i * 0.25 ? 1 : 0,
+                                y: scrollProgress > i * 0.25 ? 0 : 50,
+                            }}
+                            transition={{ duration: 0.6 }}
+                            className="text-gray-300"
+                        >
+                            <h3 className="text-xl font-bold mb-1">{exp.role}</h3>
+                            <div className="text-purple-400 mb-2">{exp.company}</div>
+                            <p className="text-sm">{exp.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden md:grid grid-cols-3 gap-10 relative">
                 {/* Left Column - Roles */}
                 <div className="relative flex left-44 flex-col gap-36">
                     {experiences.map((exp, i) => (
@@ -122,13 +162,10 @@ export default function Career() {
 
                 {/* Middle Column - Timeline */}
                 <div className="relative flex justify-center">
-                    {/* Gradient Timeline Line */}
                     <div
                         className="absolute top-0 w-[3px] bg-gradient-to-b from-purple-500 via-purple-400 to-transparent"
                         style={{ height: `${scrollProgress * 100}%` }}
                     ></div>
-
-                    {/* Glowing Circle */}
                     <div
                         className="absolute w-6 h-6 rounded-full bg-purple-500 animate-pulse"
                         style={{
