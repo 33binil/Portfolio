@@ -37,12 +37,9 @@ const ProfileImage = memo(() => (
 
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] group-hover:scale-105 transition-all duration-700">
                 <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 group-hover:border-white/40 transition-all duration-700" />
-
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 hidden sm:block group-hover:opacity-0 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
-
                 <img src="/Photo.jpg" alt="Profile" className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-2 transition-all duration-700" />
-
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 hidden sm:block transition-all duration-700 z-20">
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                     <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/10 to-transparent translate-y-full group-hover:-translate-y-full transition-transform duration-1000 delay-100" />
@@ -58,16 +55,14 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
     <div data-aos={animation} data-aos-duration="1300" className="group">
         <div className="bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 h-full flex flex-col justify-between transition-all duration-300 hover:scale-105 hover:shadow-2xl relative">
             <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10 group-hover:opacity-20 -z-10 transition-opacity`} />
-
             <div className="flex items-center justify-between mb-4">
                 <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:rotate-6 transition-transform">
                     <Icon className="w-8 h-8 text-white" />
                 </div>
                 <span className="text-4xl font-bold text-white" data-aos="fade-up-left" data-aos-duration="1500">
-          {value}
-        </span>
+                    {value}
+                </span>
             </div>
-
             <div>
                 <p className="text-sm uppercase tracking-wider text-gray-300 mb-2">{label}</p>
                 <div className="flex justify-between items-center">
@@ -99,53 +94,38 @@ const AboutPage = () => {
     const statsData = useMemo(() => [], []);
 
     return (
-        <div
-            id="About"
-            className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-10"
-        >
+        <div id="About" className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-10">
             <Header />
 
             <div className="pt-8 sm:pt-12">
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div className="space-y-6 text-center lg:text-left">
-                        <h2
-                            className="text-3xl sm:text-4xl lg:text-5xl font-bold"
-                            data-aos="fade-right"
-                        >
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold" data-aos="fade-right">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
                                 Hello, I'm
                             </span>
-                            <span
-                                className="block mt-2 text-gray-200"
-                                data-aos="fade-right"
-                                data-aos-duration="1300"
-                            >
+                            <span className="block mt-2 text-gray-200" data-aos="fade-right" data-aos-duration="1300">
                                 Binil B
                             </span>
                         </h2>
 
-                        <p
-                            className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify"
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
-                        >
-                            I’m a Full Stack Developer who loves building responsive,
-                            user-friendly web apps. Using HTML, CSS, JavaScript, React,
-                            Tailwind CSS, Node.js, Express.js, and MongoDB, I build clean,
-                            interactive UIs with a seamless user experience.
+                        <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify" data-aos="fade-right" data-aos-duration="1500">
+                            I’m a Full Stack Developer who loves building responsive, user-friendly web apps. Using HTML, CSS, JavaScript, React, Tailwind CSS, Node.js, Express.js, and MongoDB, I build clean, interactive UIs with a seamless user experience.
                         </p>
 
-                        <div className="flex flex-col lg:flex-row items-center gap-4 w-full">
+                        {/* ✅ Download CV Button */}
+                        <div className="pt-4" data-aos="fade-up" data-aos-duration="1000">
                             <a
-                                href="https://drive.google.com/drive/folders/1BOm51Grsabb3zj6Xk27K-iRwI1zITcpo"
-                                className="w-full lg:w-auto"
+                                href="/Resume-Binilb.pdf"
+                                download
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] font-medium hover:scale-105 transition-all shadow-lg hover:shadow-xl"
                             >
-                                <button className="w-full sm:px-6 py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] font-medium hover:scale-105 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 animate-bounce-slow">
-                                    <FileText className="w-5 h-5" /> Download CV
-                                </button>
+                                <FileText className="w-5 h-5" />
+                                Download CV
                             </a>
                         </div>
                     </div>
+
                     <ProfileImage />
                 </div>
 
@@ -170,8 +150,5 @@ const AboutPage = () => {
         </div>
     );
 };
-
-
-
 
 export default memo(AboutPage);

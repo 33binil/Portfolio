@@ -66,7 +66,7 @@ export default function WhatIDo() {
                         className={`
               relative border-2 border-dashed border-white w-full p-6
               transition-all duration-500 ease-in-out cursor-pointer
-              ${hoverIndex === i ? "h-[400px]" : "h-[220px]"}
+              ${hoverIndex === i ? "md:h-[370px] h-[320px]" : "md:h-[220px] h-[240px]"}
               flex flex-col justify-between
             `}
                         onMouseEnter={() => setHoverIndex(i)}
