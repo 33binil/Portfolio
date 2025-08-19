@@ -7,6 +7,7 @@ import {
     ExternalLink,
     Mail,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -30,10 +31,10 @@ const StatusBadge = memo(() => (
         <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000" />
             <div className="relative px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10">
-        <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text text-sm font-medium flex items-center">
-          <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
-          Ready to Innovate
-        </span>
+                <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text text-sm font-medium flex items-center">
+                    <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
+                    Ready to Innovate
+                </span>
             </div>
         </div>
     </div>
@@ -42,19 +43,19 @@ const StatusBadge = memo(() => (
 const MainTitle = memo(() => (
     <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-      <span className="relative inline-block">
-        <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
-        <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          FullStack
-        </span>
-      </span>
+            <span className="relative inline-block">
+                <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
+                <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+                    FullStack
+                </span>
+            </span>
             <br />
             <span className="relative inline-block mt-2">
-        <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
-        <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
-          Developer
-        </span>
-      </span>
+                <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
+                <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+                    Developer
+                </span>
+            </span>
         </h1>
     </div>
 ));
@@ -72,11 +73,17 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
             <div className="relative h-11 bg-[#030014] backdrop-blur-xl rounded-lg border border-white/10 leading-none overflow-hidden">
                 <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 bg-gradient-to-r from-[#4f52c9]/20 to-[#8644c5]/20"></div>
                 <span className="absolute inset-0 flex items-center justify-center gap-2 text-sm group-hover:gap-3 transition-all duration-300">
-          <span className="bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent font-medium z-10">
-            {text}
-          </span>
-          <Icon className={`w-4 h-4 text-gray-200 ${text === 'Contact' ? 'group-hover:translate-x-1' : 'group-hover:rotate-45'} transform transition-all duration-300 z-10`} />
-        </span>
+                    <span className="bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent font-medium z-10">
+                        {text}
+                    </span>
+                    <Icon
+                        className={`w-4 h-4 text-gray-200 ${
+                            text === "Contact"
+                                ? "group-hover:translate-x-1"
+                                : "group-hover:rotate-45"
+                        } transform transition-all duration-300 z-10`}
+                    />
+                </span>
             </div>
         </button>
     </a>
@@ -159,47 +166,131 @@ const Home = () => {
             <div className="container mx-auto px-[5%] sm:px-6 lg:px-0 min-h-screen">
                 <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-12 lg:gap-20">
                     {/* Left */}
-                    <div className="w-full lg:w-1/2 space-y-8 text-left" data-aos="fade-right" data-aos-delay="200">
+                    <div
+                        className="w-full lg:w-1/2 space-y-8 text-left"
+                        data-aos="fade-right"
+                        data-aos-delay="200"
+                    >
                         <StatusBadge />
                         <MainTitle />
-                        <div className="h-8 flex items-center" data-aos="fade-up" data-aos-delay="800">
-              <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
-                {text}
-              </span>
+                        <div
+                            className="h-8 flex items-center"
+                            data-aos="fade-up"
+                            data-aos-delay="800"
+                        >
+                            <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
+                                {text}
+                            </span>
                             <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink" />
                         </div>
-                        <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light" data-aos="fade-up" data-aos-delay="1000">
-                            FullStack Developer and UI/UX Design focus on creating responsive, user-friendly interfaces. Using HTML, CSS, JavaScript, React, and Tailwind CSS, I build clean, interactive UIs with a seamless user experience
+                        <p
+                            className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
+                            data-aos="fade-up"
+                            data-aos-delay="1000"
+                        >
+                            FullStack Developer and UI/UX Design focus on
+                            creating responsive, user-friendly interfaces. Using
+                            HTML, CSS, JavaScript, React, and Tailwind CSS, I
+                            build clean, interactive UIs with a seamless user
+                            experience
                         </p>
-                        <div className="flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="1200">
+                        <div
+                            className="flex flex-wrap gap-3"
+                            data-aos="fade-up"
+                            data-aos-delay="1200"
+                        >
                             {TECH_STACK.map((tech, index) => (
                                 <TechStack key={index} tech={tech} />
                             ))}
                         </div>
-                        <div className="flex gap-3" data-aos="fade-up" data-aos-delay="1400">
-                            <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
-                            <CTAButton href="#Contact" text="Contact" icon={Mail} />
-                        </div>
-                        <div className="hidden sm:flex gap-4" data-aos="fade-up" data-aos-delay="1600">
-                            {SOCIAL_LINKS.map((item, i) => (
-                                <SocialLink key={i} {...item} />
-                            ))}
+                        <div
+                            className="flex gap-3"
+                            data-aos="fade-up"
+                            data-aos-delay="1400"
+                        >
+                            <CTAButton
+                                href="#Portofolio"
+                                text="Projects"
+                                icon={ExternalLink}
+                            />
+                            <CTAButton
+                                href="#Contact"
+                                text="Contact"
+                                icon={Mail}
+                            />
                         </div>
                     </div>
 
+                    {/* Sidebar Social Icons */}
+                    <aside className="fixed left-8 bottom-12 flex flex-col gap-6 text-gray-400">
+                        <a
+                            href="https://github.com/33binil"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                        >
+                            <Github size={30} />
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/33binilb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                        >
+                            <Linkedin size={30} />
+                        </a>
+                        {/* Changed from X to WhatsApp */}
+                        <a
+                            href="https://wa.me/917902931503"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-green-500"
+                        >
+                            <FaWhatsapp size={30} />
+                        </a>
+                        <a
+                            href="https://instagram.com/binil_.b"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                        >
+                            <Instagram size={30} />
+                        </a>
+                    </aside>
+
                     {/* Right */}
-                    <div className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center"
-                         onMouseEnter={() => setIsHovering(true)}
-                         onMouseLeave={() => setIsHovering(false)}
-                         data-aos="fade-left"
-                         data-aos-delay="600">
+                    <div
+                        className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center"
+                        onMouseEnter={() => setIsHovering(true)}
+                        onMouseLeave={() => setIsHovering(false)}
+                        data-aos="fade-left"
+                        data-aos-delay="600"
+                    >
                         <div className="relative w-full opacity-90">
-                            <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ${isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"}`} />
-                            <div className={`relative z-10 w-full transition-transform duration-500 ${isHovering ? "scale-105" : "scale-100"}`}>
+                            <div
+                                className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ${
+                                    isHovering
+                                        ? "opacity-50 scale-105"
+                                        : "opacity-20 scale-100"
+                                }`}
+                            />
+                            <div
+                                className={`relative z-10 w-full transition-transform duration-500 ${
+                                    isHovering ? "scale-105" : "scale-100"
+                                }`}
+                            >
                                 <DotLottieReact {...lottieOptions} />
                             </div>
-                            <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${isHovering ? "opacity-50" : "opacity-20"}`}>
-                                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] ${isHovering ? "scale-110" : "scale-100"}`} />
+                            <div
+                                className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
+                                    isHovering ? "opacity-50" : "opacity-20"
+                                }`}
+                            >
+                                <div
+                                    className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] ${
+                                        isHovering ? "scale-110" : "scale-100"
+                                    }`}
+                                />
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const experiences = [
     {
@@ -17,14 +19,14 @@ const experiences = [
             </a>
         ),
         description:
-            "Built responsive websites with React, Tailwind, and WordPress; designed user-focused UIs in Figma, optimized performance, and deployed via Git, Vercel, and Netlify. Delivered branding assets and landing pages to boost client presence."
+            "Built responsive websites with React, Tailwind, and WordPress; designed user-focused UIs in Figma, optimized performance, and deployed via Git, Vercel, and Netlify. Delivered branding assets and landing pages to boost client presence.",
     },
     {
         year: "2025",
         role: "Web Development Intern",
         company: "Nano Robotics Embed Technologies (NRET) - Bengaluru, India",
         description:
-            "Built SEO-optimized websites with React, Tailwind, and WordPress. Designed user-friendly UIs in Figma, deployed with Git/Vercel/Netlify, and delivered branding assets with strategic landing pages."
+            "Built SEO-optimized websites with React, Tailwind, and WordPress. Designed user-friendly UIs in Figma, deployed with Git/Vercel/Netlify, and delivered branding assets with strategic landing pages.",
     },
     {
         year: "NOW",
@@ -45,7 +47,10 @@ export default function Career() {
                 const rect = section.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
                 const progress = Math.min(
-                    Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+                    Math.max(
+                        (windowHeight - rect.top) / (rect.height + windowHeight),
+                        0
+                    ),
                     1
                 );
                 setScrollProgress(progress);
@@ -56,6 +61,10 @@ export default function Career() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    useEffect(() => {
+        AOS.init({ once: true });
+    }, []);
+
     return (
         <section
             id="career-section"
@@ -63,12 +72,32 @@ export default function Career() {
         >
             {/* Heading */}
             <div className="text-center mb-44">
-                <h2 className="text-5xl md:text-7xl font-bold leading-tight">
-                    My career & <br />
-                    <span className="bg-gradient-to-b from-white to-purple-600 bg-clip-text text-transparent">
-            experience
+                <h2
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    className="inline-block text-3xl md:text-6xl font-bold text-center mx-auto text-transparent bg-clip-text"
+                >
+          <span
+              style={{
+                  color: "#6366f1",
+                  backgroundImage:
+                      "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+              }}
+          >
+            My Career & Experience
           </span>
                 </h2>
+
+                <p
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
+                >
+                    A timeline of my professional journey, roles, and learnings.
+                </p>
             </div>
 
             {/* Timeline Layout */}

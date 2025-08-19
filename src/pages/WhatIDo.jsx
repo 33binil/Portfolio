@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function WhatIDo() {
     const [hoverIndex, setHoverIndex] = useState(null);
@@ -41,7 +42,12 @@ export default function WhatIDo() {
     return (
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16 px-10 py-20">
             {/* LEFT SIDE — TITLE */}
-            <div className="relative left-64">
+            <div
+                className="relative left-64"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-easing="ease-out-cubic"
+            >
                 <h2 className="relative font-sans font-bold text-8xl leading-tight">
                     WHAT
                     <div>
@@ -49,6 +55,7 @@ export default function WhatIDo() {
                     </div>
                 </h2>
             </div>
+
 
             {/* RIGHT SIDE — BOXES */}
             <div className="relative left-[-400px] flex flex-col top-[-100px] gap-8 w-full max-w-[500px]">
