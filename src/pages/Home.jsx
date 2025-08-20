@@ -18,12 +18,7 @@ const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 
 const WORDS = ["Passionate UI/UX Designer", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Tailwind", "Figma", "Adobe XD",];
-const SOCIAL_LINKS = [
-    { icon: Github, link: "https://github.com/33binil" },
-    { icon: Linkedin, link: "https://linkedin.com/in/33binilb" },
-    { icon: Instagram, link: "https://instagram.com/binil_.b" },
-];
+const TECH_STACK = ["React", "Javascript", "Tailwind", "Figma", "Adobe XD"];
 
 // Reusable Components
 const StatusBadge = memo(() => (
@@ -44,7 +39,7 @@ const StatusBadge = memo(() => (
 
 const MainTitle = memo(() => (
     <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+        <h1 className="font-exo text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
             <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
                 <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
@@ -63,7 +58,7 @@ const MainTitle = memo(() => (
 ));
 
 const TechStack = memo(({ tech }) => (
-    <div className="px-4 py-2 hidden sm:block rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300 hover:bg-white/10 transition-colors">
+    <div className="font-exo px-4 py-2 hidden sm:block rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-gray-300 hover:bg-white/10 transition-colors">
         {tech}
     </div>
 ));
@@ -86,17 +81,6 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
                         } transform transition-all duration-300 z-10`}
                     />
                 </span>
-            </div>
-        </button>
-    </a>
-));
-
-const SocialLink = memo(({ icon: Icon, link }) => (
-    <a href={link} target="_blank" rel="noopener noreferrer">
-        <button className="group relative p-3">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-            <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
-                <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
             </div>
         </button>
     </a>
@@ -146,28 +130,12 @@ const Home = () => {
         return () => clearTimeout(timeout);
     }, [handleTyping]);
 
-    // Lottie Options
-    const lottieOptions = {
-        src: "https://lottie.host/3c34a576-f594-41a9-be4b-af235d03a8e1/CIXMc0Smtn.lottie",
-        loop: true,
-        autoplay: true,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice",
-            progressiveLoad: true,
-        },
-        style: { width: "100%", height: "100%" },
-        className: `w-full h-full transition-all duration-500 ${
-            isHovering
-                ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
-                : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
-        }`,
-    };
-
     return (
         <div className="min-h-screen bg-[#030014] overflow-hidden" id="Home">
             <div className="container mx-auto px-[5%] sm:px-6 lg:px-0 min-h-screen">
                 <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-12 lg:gap-20">
-                    {/* Left */}
+
+                    {/* Left Section */}
                     <div
                         className="w-full lg:w-1/2 space-y-8 text-left"
                         data-aos="fade-right"
@@ -186,7 +154,7 @@ const Home = () => {
                             <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink" />
                         </div>
                         <p
-                            className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
+                            className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-exo"
                             data-aos="fade-up"
                             data-aos-delay="1000"
                         >
@@ -224,42 +192,21 @@ const Home = () => {
                    left-7 bottom-7
                    md:left-14 md:bottom-12
                    z-50">
-                        <a
-                            href="https://github.com/33binil"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-white"
-                        >
+                        <a href="https://github.com/33binil" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                             <Github size={30} />
                         </a>
-                        <a
-                            href="https://linkedin.com/in/33binilb"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-white"
-                        >
+                        <a href="https://linkedin.com/in/33binilb" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                             <Linkedin size={30} />
                         </a>
-                        <a
-                            href="https://wa.me/917902931503"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-green-500"
-                        >
+                        <a href="https://wa.me/917902931503" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
                             <FaWhatsapp size={30} />
                         </a>
-                        <a
-                            href="https://instagram.com/binil_.b"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-white"
-                        >
+                        <a href="https://instagram.com/binil_.b" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                             <Instagram size={30} />
                         </a>
                     </aside>
 
-
-                    {/* Right */}
+                    {/* Right Section */}
                     <div
                         className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center"
                         onMouseEnter={() => setIsHovering(true)}
@@ -280,7 +227,16 @@ const Home = () => {
                                     isHovering ? "scale-105" : "scale-100"
                                 }`}
                             >
-                                <DotLottieReact {...lottieOptions} />
+                                <DotLottieReact
+                                    src="https://lottie.host/3c34a576-f594-41a9-be4b-af235d03a8e1/CIXMc0Smtn.lottie"
+                                    loop
+                                    autoplay
+                                    className={`w-full h-full transition-all duration-500 ${
+                                        isHovering
+                                            ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
+                                            : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
+                                    }`}
+                                />
                             </div>
                             <div
                                 className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
@@ -295,6 +251,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

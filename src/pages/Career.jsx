@@ -94,7 +94,7 @@ export default function Career() {
                 <p
                     data-aos="fade-up"
                     data-aos-duration="1200"
-                    className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
+                    className="font-exo text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
                 >
                     A timeline of my professional journey, roles, and learnings.
                 </p>
@@ -178,11 +178,11 @@ export default function Career() {
                 </div>
 
                 {/* Right Column - Descriptions */}
-                <div className="relative left-[-90px] text-lg flex flex-col gap-24">
+                <div className=" relative left-[-90px] text-lg flex flex-col gap-24">
                     {experiences.map((exp, i) => (
                         <motion.p
                             key={i}
-                            className="text-gray-300 max-w-md"
+                            className="font-exo text-gray-300 max-w-md"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{
                                 opacity: scrollProgress > i * 0.25 ? 1 : 0,

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 export default function WhatIDo() {
     const [hoverIndex, setHoverIndex] = useState(null);

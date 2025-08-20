@@ -1,9 +1,9 @@
-import React, { useEffect, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles } from "lucide-react"
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect, memo, useMemo } from "react";
+import { FileText, ArrowUpRight, Sparkles } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Header Section
+// ✅ Header Section
 const Header = memo(() => (
     <div className="text-center lg:mb-8 mb-2 px-[5%]">
         <h2
@@ -14,7 +14,7 @@ const Header = memo(() => (
             About Me
         </h2>
         <p
-            className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
+            className="font-exo mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
             data-aos="zoom-in-up"
             data-aos-duration="800"
         >
@@ -25,7 +25,7 @@ const Header = memo(() => (
     </div>
 ));
 
-// Profile Image Section
+// ✅ Profile Image Section
 const ProfileImage = memo(() => (
     <div className="flex justify-end items-center sm:p-12 p-0 py-2">
         <div className="relative group" data-aos="fade-up" data-aos-duration="1000">
@@ -39,7 +39,11 @@ const ProfileImage = memo(() => (
                 <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 group-hover:border-white/40 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 hidden sm:block group-hover:opacity-0 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
-                <img src="/Photo.jpg" alt="Profile" className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-2 transition-all duration-700" />
+                <img
+                    src="/Photo.jpg"
+                    alt="Profile"
+                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-2 transition-all duration-700"
+                />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 hidden sm:block transition-all duration-700 z-20">
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                     <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/10 to-transparent translate-y-full group-hover:-translate-y-full transition-transform duration-1000 delay-100" />
@@ -50,7 +54,7 @@ const ProfileImage = memo(() => (
     </div>
 ));
 
-// Stats Card
+// ✅ Stats Card Component (kept in case you want to add stats later)
 const StatCard = memo(({ icon: Icon, color, value, label, description, animation }) => (
     <div data-aos={animation} data-aos-duration="1300" className="group">
         <div className="bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 h-full flex flex-col justify-between transition-all duration-300 hover:scale-105 hover:shadow-2xl relative">
@@ -60,8 +64,8 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
                     <Icon className="w-8 h-8 text-white" />
                 </div>
                 <span className="text-4xl font-bold text-white" data-aos="fade-up-left" data-aos-duration="1500">
-                    {value}
-                </span>
+          {value}
+        </span>
             </div>
             <div>
                 <p className="text-sm uppercase tracking-wider text-gray-300 mb-2">{label}</p>
@@ -74,24 +78,26 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
     </div>
 ));
 
-// Main About Component
+// ✅ Main About Component
 const AboutPage = () => {
     useEffect(() => {
         const initAOS = () => AOS.init({ once: false });
         initAOS();
+
         let resizeTimer;
         const handleResize = () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(initAOS, 250);
         };
         window.addEventListener("resize", handleResize);
+
         return () => {
             window.removeEventListener("resize", handleResize);
             clearTimeout(resizeTimer);
         };
     }, []);
 
-    const statsData = useMemo(() => [], []);
+    const statsData = useMemo(() => [], []); // currently empty
 
     return (
         <div id="About" className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-10">
@@ -100,16 +106,27 @@ const AboutPage = () => {
             <div className="pt-8 sm:pt-12">
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div className="space-y-6 text-center lg:text-left">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold" data-aos="fade-right">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
-                                Hello, I'm
-                            </span>
-                            <span className="block mt-2 text-gray-200" data-aos="fade-right" data-aos-duration="1300">
-                                Binil B
-                            </span>
+                        <h2
+                            className="text-3xl sm:text-4xl lg:text-5xl font-exo font-bold"
+                            data-aos="fade-right"
+                        >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+                Hello, I'm
+              </span>
+                            <span
+                                className="block mt-2 text-gray-200"
+                                data-aos="fade-right"
+                                data-aos-duration="1300"
+                            >
+                Binil B
+              </span>
                         </h2>
 
-                        <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify" data-aos="fade-right" data-aos-duration="1500">
+                        <p
+                            className="relative font-exo text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify"
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                        >
                             I’m a Passionate UI/UX Designer and Frontend Developer who loves crafting responsive, user-friendly web apps. Using HTML, CSS, JavaScript, React, and Tailwind CSS, I design and build clean, interactive UIs that deliver seamless user experiences.
                         </p>
 
@@ -128,25 +145,18 @@ const AboutPage = () => {
 
                     <ProfileImage />
                 </div>
-
-                <a href="#Portofolio">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
-                        {statsData.map((stat) => (
-                            <StatCard key={stat.label} {...stat} />
-                        ))}
-                    </div>
-                </a>
             </div>
 
+            {/* ✅ Animations */}
             <style>{`
-                @keyframes float { 
-                    0%, 100% { transform: translateY(0); } 
-                    50% { transform: translateY(-20px); } 
-                }
-                @keyframes spin-slower { 
-                    to { transform: rotate(360deg); } 
-                }
-            `}</style>
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes spin-slower {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
         </div>
     );
 };

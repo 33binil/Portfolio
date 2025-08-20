@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Geist", "sans-serif"],
-      },
+        exo: ["'Exo 2'", 'sans-serif'],
+        selection: ["Selection'", 'sans-serif']
+      }
     },
   },
   plugins: [],

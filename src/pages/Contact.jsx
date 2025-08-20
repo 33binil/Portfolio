@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SocialLinks from "../components/SocialLinks";
 import "aos/dist/aos.css";
 
@@ -28,7 +28,7 @@ const ContactPage = () => {
                 <p
                     data-aos="fade-up"
                     data-aos-duration="1100"
-                    className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
+                    className="font-exo text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
                 >
                     Ready to bring value to your team — let’s get in touch!
                 </p>
