@@ -18,7 +18,7 @@ const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 
 const WORDS = ["Passionate UI/UX Designer", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind", "MongoDB"];
+const TECH_STACK = ["React", "Javascript", "Tailwind", "Figma", "Adobe XD",];
 const SOCIAL_LINKS = [
     { icon: Github, link: "https://github.com/33binil" },
     { icon: Linkedin, link: "https://linkedin.com/in/33binilb" },
@@ -190,11 +190,7 @@ const Home = () => {
                             data-aos="fade-up"
                             data-aos-delay="1000"
                         >
-                            FullStack Developer and UI/UX Design focus on
-                            creating responsive, user-friendly interfaces. Using
-                            HTML, CSS, JavaScript, React, and Tailwind CSS, I
-                            build clean, interactive UIs with a seamless user
-                            experience
+                            Passionate UI/UX Designer & Frontend Developer focused on creating responsive, user-friendly interfaces. Using HTML, CSS, JavaScript, React, and Tailwind CSS, I craft clean, interactive UIs with seamless user experiences.
                         </p>
                         <div
                             className="flex flex-wrap gap-3"

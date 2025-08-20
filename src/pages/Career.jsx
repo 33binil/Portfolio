@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const experiences = [
     {
         year: "2024 – Present",
-        role: "Web Developer, Freelance Service",
+        role: "UI/UX Designer & Frontend Developer, Freelance Service",
         company: (
             <a
                 href="https://pixeljunkiestudio.in"
@@ -19,21 +19,21 @@ const experiences = [
             </a>
         ),
         description:
-            "Built responsive websites with React, Tailwind, and WordPress; designed user-focused UIs in Figma, optimized performance, and deployed via Git, Vercel, and Netlify. Delivered branding assets and landing pages to boost client presence.",
+            "Designed intuitive user interfaces in Figma and developed responsive, interactive frontends with React and Tailwind CSS. Delivered branding assets, landing pages, and optimized web experiences deployed on Vercel and Netlify, helping clients strengthen their digital presence.",
     },
     {
         year: "2025",
-        role: "Web Development Intern",
+        role: "Frontend Development Intern",
         company: "Nano Robotics Embed Technologies (NRET) - Bengaluru, India",
         description:
-            "Built SEO-optimized websites with React, Tailwind, and WordPress. Designed user-friendly UIs in Figma, deployed with Git/Vercel/Netlify, and delivered branding assets with strategic landing pages.",
+            "Developed responsive frontends using React and Tailwind CSS, optimized layouts for performance and accessibility, and deployed projects via Git, Vercel, and Netlify. Assisted in creating branding assets and strategic landing pages to enhance client presence.",
     },
     {
         year: "NOW",
         role: "Freelance & Upskilling",
         company: "Freelance",
         description:
-            "Worked as a freelancer for various clients, providing 3D and web services, while actively upskilling in multiple areas increasing my tech stack.",
+            "Collaborated with clients to design intuitive UI/UX experiences in Figma and develop responsive frontends using React and Tailwind CSS. Delivered branding assets, interactive prototypes, and modern web interfaces while actively upskilling in design systems, accessibility, and advanced frontend frameworks.",
     },
 ];
 
@@ -143,7 +143,7 @@ export default function Career() {
             {/* Desktop Layout */}
             <div className="hidden md:grid grid-cols-3 gap-10 relative">
                 {/* Left Column - Roles */}
-                <div className="relative flex left-44 flex-col gap-36">
+                <div className="relative flex left-44 flex-col gap-44">
                     {experiences.map((exp, i) => (
                         <motion.div
                             key={i}

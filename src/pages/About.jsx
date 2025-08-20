@@ -110,13 +110,13 @@ const AboutPage = () => {
                         </h2>
 
                         <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify" data-aos="fade-right" data-aos-duration="1500">
-                            I’m a Full Stack Developer who loves building responsive, user-friendly web apps. Using HTML, CSS, JavaScript, React, Tailwind CSS, Node.js, Express.js, and MongoDB, I build clean, interactive UIs with a seamless user experience.
+                            I’m a Passionate UI/UX Designer and Frontend Developer who loves crafting responsive, user-friendly web apps. Using HTML, CSS, JavaScript, React, and Tailwind CSS, I design and build clean, interactive UIs that deliver seamless user experiences.
                         </p>
 
                         {/* ✅ Download CV Button */}
                         <div className="pt-4" data-aos="fade-up" data-aos-duration="1000">
                             <a
-                                href="/Resume-Binilb.pdf"
+                                href="/BinilB.pdf"
                                 download
                                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] font-medium hover:scale-105 transition-all shadow-lg hover:shadow-xl"
                             >

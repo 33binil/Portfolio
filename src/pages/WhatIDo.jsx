@@ -6,37 +6,40 @@ export default function WhatIDo() {
 
     const items = [
         {
-            title: "WEB DEVELOPMENT",
+            title: "UI/UX DESIGN",
             description:
-                "I build responsive, scalable, and interactive web applications with a focus on clean code and seamless user experience. I combine frontend and backend expertise to deliver complete, modern web solutions.",
+                "I craft intuitive and visually appealing user experiences with a strong focus on usability, accessibility, and modern design principles. From wireframes to polished prototypes, I design interfaces that balance creativity with functionality to deliver seamless digital experiences.",
+            skills: [
+                "Figma",
+                "Adobe XD",
+                "Sketch",
+                "Wireframing",
+                "Prototyping",
+                "User Research",
+                "Usability Testing",
+                "Design Systems",
+                "Interaction Design",
+                "Responsive Design",
+                "Visual Design",
+                "UI/UX Prototyping",
+            ],
+        },
+        {
+            title: "FRONTEND DEVELOPMENT",
+            description:
+                "I build responsive, scalable, and interactive web applications with a focus on clean code, performance, and seamless user experience. I specialize in modern frontend technologies to deliver fast, dynamic, and user-friendly interfaces.",
             skills: [
                 "HTML5",
                 "CSS3",
                 "JavaScript",
                 "React.js",
                 "Next.js",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
                 "Tailwind CSS",
-                "REST APIs",
+                "Framer Motion / GSAP",
+                "Responsive Design",
                 "Git & GitHub",
-                "Responsive Design",
             ],
-        },
-        {
-            title: "UI/UX DESIGN",
-            description:
-                "I create intuitive and visually appealing digital experiences, focusing on user-centered design principles. From wireframing and prototyping to interactive interfaces, I ensure every design is responsive, accessible, and engaging.",
-            skills: [
-                "User Research",
-                "Interaction Design",
-                "Visual Design",
-                "Responsive Design",
-                "Figma",
-                "Tailwind CSS",
-                "React UI Implementation",
-            ],
+
         },
     ];
 
@@ -80,8 +83,8 @@ export default function WhatIDo() {
 
                         {/* Content */}
                         <div>
-                            <h3 className="text-2xl font-bold">{item.title}</h3>
-                            <h4 className="text-lg mt-2">Description</h4>
+                            <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                            <h4 className="text-lg mt-0"></h4>
                             <p className="text-sm mt-1">{item.description}</p>
                         </div>
 
