@@ -7,7 +7,7 @@ import {
     ExternalLink,
     Mail,
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaBehance } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -188,24 +188,53 @@ const Home = () => {
                     </div>
 
                     {/* Sidebar Social Icons */}
-                    <aside className="fixed flex flex-col gap-6 text-gray-400
-                   left-7 bottom-7
-                   md:left-14 md:bottom-12
-                   z-50">
-                        <a href="https://github.com/33binil" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <aside
+                        className="fixed flex flex-col gap-6 text-gray-400
+             left-7 bottom-7
+             md:left-14 md:bottom-12
+             z-50"
+                    >
+                        <a
+                            href="https://github.com/33binil"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                        >
                             <Github size={30} />
                         </a>
-                        <a href="https://linkedin.com/in/33binilb" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                        <a
+                            href="https://linkedin.com/in/33binilb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                        >
                             <Linkedin size={30} />
                         </a>
-                        <a href="https://wa.me/917902931503" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+                        <a
+                            href="https://wa.me/917902931503"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-green-500"
+                        >
                             <FaWhatsapp size={30} />
                         </a>
-                        <a href="https://instagram.com/binil_.b" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                        <a
+                            href="https://instagram.com/binil_.b"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                        >
                             <Instagram size={30} />
                         </a>
+                        <a
+                            href="https://www.behance.net/binilb3"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-blue-500"
+                        >
+                            <FaBehance size={30} />
+                        </a>
                     </aside>
-
                     {/* Right Section */}
                     <div
                         className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center"
