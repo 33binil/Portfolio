@@ -3,8 +3,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const projects = [
+
     {
         id: "01",
+        title: "Personal Diary",
+        role: "Web Project",
+        tools: "React, MongoDB, Node.js, Express.jsx, Firebase, Google Auth",
+        img: "https://raw.githubusercontent.com/33binil/Portfolio-Website/main/public/img/diary.jpg",
+        link: "https://personal-diary-frontend.onrender.com",
+    },
+    {
+        id: "02",
         title: "Pixel Junkie Creative Studio",
         role: "Web design and development",
         tools: "React, Tailwind CSS, Figma",
@@ -12,7 +21,7 @@ const projects = [
         link: "https://pixeljunkiestudio.in",
     },
     {
-        id: "02",
+        id: "03",
         title: "Internship Project",
         role: "Web development",
         tools: "HTML, CSS, ",
@@ -20,14 +29,14 @@ const projects = [
         link: "https://front-end-website-1.vercel.app/",
     },
     {
-        id: "03",
+        id: "04",
         title: "Blood Bank Donation Management System",
         role: "College Project",
         tools: "PHP, Javascript, CSS",
         img: "https://raw.githubusercontent.com/33binil/Portfolio-Website/main/public/img/BBDMS.jpg",
     },
     {
-        id: "04",
+        id: "05",
         title: "Weather App",
         role: "Web Project",
         tools: "Javascript, HTML, CSS",
@@ -35,20 +44,33 @@ const projects = [
         link: "https://weather-app-coral-seven-64.vercel.app/",
     },
     {
-        id: "05",
+        id: "06",
         title: "QR Code Generator",
         role: "Web Project",
         tools: "Javascript, HTML, CSS",
         img: "https://raw.githubusercontent.com/33binil/Portfolio-Website/main/public/img/QR.png",
         link: "https://qr-generator-beta-dusky.vercel.app/",
     },
+
 ];
 
 const Showcase = () => {
     const [activeId, setActiveId] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     React.useEffect(() => {
         AOS.init({ once: true });
+
+        // detect mobile via media query
+        const mq = window.matchMedia("(max-width: 767px)");
+        const handle = (e) => setIsMobile(e.matches);
+        setIsMobile(mq.matches);
+        if (mq.addEventListener) mq.addEventListener("change", handle);
+        else mq.addListener(handle);
+        return () => {
+            if (mq.removeEventListener) mq.removeEventListener("change", handle);
+            else mq.removeListener(handle);
+        };
     }, []);
 
     return (
@@ -83,7 +105,7 @@ const Showcase = () => {
             </div>
 
             {/* Projects Showcase */}
-            <div className="flex justify-center w-full max-w-7xl mx-auto h-[400px] space-x-4">
+            <div className="flex flex-col md:flex-row justify-center w-full max-w-7xl mx-auto md:h-[400px] md:space-x-4 space-y-4 md:space-y-0">
                 {projects.map((project) => {
                     const isActive = activeId === project.id;
                     const isAnyActive = activeId !== null;
@@ -94,14 +116,25 @@ const Showcase = () => {
                             onMouseEnter={() => setActiveId(project.id)}
                             onMouseLeave={() => setActiveId(null)}
                             onClick={() => window.open(project.link, "_blank")} // redirect on click
-                            style={{
-                                flex: isActive ? 3 : isAnyActive ? 0.8 : 1,
-                                transition: "flex 0.6s ease-in-out",
-                                backgroundImage: `url(${project.img})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}
-                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                            style={(() => {
+                                const base = {
+                                    transition: isMobile ? "height 0.4s ease-in-out" : "flex 0.6s ease-in-out",
+                                    backgroundImage: `url(${project.img})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                };
+                                if (isMobile) {
+                                    return {
+                                        ...base,
+                                        height: isActive ? 250 : 160,
+                                    };
+                                }
+                                return {
+                                    ...base,
+                                    flex: isActive ? 3 : isAnyActive ? 0.8 : 1,
+                                };
+                            })()}
+                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer w-full"
                         >
                             {/* Overlay */}
                             <div

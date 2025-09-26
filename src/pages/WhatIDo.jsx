@@ -24,9 +24,9 @@ export default function WhatIDo() {
             ],
         },
         {
-            title: "FRONTEND DEVELOPMENT",
+            title: "FULL-STACK DEVELOPMENT",
             description:
-                "I build responsive, scalable, and interactive web applications with a focus on clean code, performance, and seamless user experience. I specialize in modern frontend technologies to deliver fast, dynamic, and user-friendly interfaces.",
+                "I build responsive, scalable, and interactive web applications with a focus on clean code, performance, and seamless user experience. Leveraging the MERN stack (MongoDB, Express.js, React, Node.js) along with modern frontend technologies like HTML, CSS, JavaScript, and Tailwind CSS, I deliver fast, dynamic, and user-friendly interfaces backed by robust server-side functionality.",
             skills: [
                 "HTML5",
                 "CSS3",
@@ -34,6 +34,9 @@ export default function WhatIDo() {
                 "React.js",
                 "Next.js",
                 "Tailwind CSS",
+                "Node.js",
+                "Express.jsx",
+                "MongoDB",
                 "Framer Motion / GSAP",
                 "Responsive Design",
                 "Git & GitHub",
@@ -68,7 +71,7 @@ export default function WhatIDo() {
                         className={`
               relative border-2 border-dashed border-white w-full p-6
               transition-all duration-500 ease-in-out cursor-pointer
-              ${hoverIndex === i ? "md:h-[370px] h-[320px]" : "md:h-[220px] h-[240px]"}
+              ${hoverIndex === i ? "md:h-[370px] h-[620px]" : "md:h-[220px] h-[340px]"}
               flex flex-col justify-between
             `}
                         onMouseEnter={() => setHoverIndex(i)}

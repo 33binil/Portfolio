@@ -8,6 +8,7 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import WhatIDo from "./pages/WhatIDo.jsx";
 import Career from "./pages/Career.jsx";
+import Stack from "./pages/Stack.jsx";
 
 function App() {
     const [showWelcome, setShowWelcome] = useState(true);
@@ -28,6 +29,9 @@ function App() {
                     </section>
                     <section id="whatido">
                         <WhatIDo />
+                    </section>
+                    <section id="stack">
+                        <Stack />
                     </section>
                     <section id="career">
                         <Career />

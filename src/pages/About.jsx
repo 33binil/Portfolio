@@ -100,10 +100,10 @@ const AboutPage = () => {
     const statsData = useMemo(() => [], []); // currently empty
 
     return (
-        <div id="About" className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-10">
+        <div id="About" className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-32 md:mt-0">
             <Header />
 
-            <div className="pt-8 sm:pt-12">
+            <div className="pt-8 sm:pt-12 mb-0 md:mb-28 ">
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div className="space-y-6 text-center lg:text-left">
                         <h2
@@ -127,7 +127,7 @@ const AboutPage = () => {
                             data-aos="fade-right"
                             data-aos-duration="1500"
                         >
-                            I’m a Passionate UI/UX Designer and Frontend Developer who loves crafting responsive, user-friendly web apps. Using HTML, CSS, JavaScript, React, and Tailwind CSS, I design and build clean, interactive UIs that deliver seamless user experiences.
+                            I'm a passionate UI/UX Designer and MERN Stack Developer who loves crafting responsive, user-friendly web apps. Using MongoDB, Express.js, React, Node.js, HTML, CSS, JavaScript, and Tailwind CSS, I design and build clean, interactive UIs with robust backends to deliver seamless user experiences.
                         </p>
 
                         {/* ✅ Download CV Button */}

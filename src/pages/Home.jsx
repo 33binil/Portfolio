@@ -43,7 +43,7 @@ const MainTitle = memo(() => (
             <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
                 <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                    FullStack
+                    MERN Stack
                 </span>
             </span>
             <br />
@@ -158,7 +158,7 @@ const Home = () => {
                             data-aos="fade-up"
                             data-aos-delay="1000"
                         >
-                            Passionate UI/UX Designer & Frontend Developer focused on creating responsive, user-friendly interfaces. Using HTML, CSS, JavaScript, React, and Tailwind CSS, I craft clean, interactive UIs with seamless user experiences.
+                            Passionate UI/UX Designer & MERN Stack Developer focused on creating responsive, user-friendly interfaces and full-stack applications. Using MongoDB, Express.js, React, Node.js, HTML, CSS, JavaScript, and Tailwind CSS, I craft clean, interactive UIs and robust backends for seamless user experiences.
                         </p>
                         <div
                             className="flex flex-wrap gap-3"

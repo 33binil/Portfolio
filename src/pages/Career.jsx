@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const experiences = [
     {
         year: "2024 – Present",
-        role: "UI/UX Designer & Frontend Developer, Freelance Service",
+        role: "UI/UX Designer & Software Developer, Freelance Service",
         company: (
             <a
                 href="https://pixeljunkiestudio.in"
@@ -19,8 +19,9 @@ const experiences = [
             </a>
         ),
         description:
-            "Designed intuitive user interfaces in Figma and developed responsive, interactive frontends with React and Tailwind CSS. Delivered branding assets, landing pages, and optimized web experiences deployed on Vercel and Netlify, helping clients strengthen their digital presence.",
-    },
+            "Designed intuitive user interfaces in Figma and developed responsive, interactive frontends with React and Tailwind CSS. Built and integrated full-stack features using the MERN stack (MongoDB, Express.js, React, Node.js). Delivered branding assets, landing pages, and optimized web experiences deployed on Vercel and Netlify, helping clients strengthen their digital presence.",
+
+},
     {
         year: "2025",
         role: "Frontend Development Intern",
