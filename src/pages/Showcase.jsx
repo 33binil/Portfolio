@@ -6,6 +6,14 @@ const projects = [
 
     {
         id: "01",
+        title: "Randell's Harvest - Omniblend",
+        role: "Web Project/E-Commerce/(# In Progress)",
+        tools: "React, Sql, Python, Firebase, Google Auth",
+        img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/diary-2.jpg",
+        link: "https://omniblend-v2-1.vercel.app/",
+    },
+    {
+        id: "02",
         title: "Personal Diary",
         role: "Web Project",
         tools: "React, MongoDB, Node.js, Express.jsx, Firebase, Google Auth",
@@ -13,7 +21,7 @@ const projects = [
         link: "https://personal-diary-frontend.onrender.com",
     },
     {
-        id: "02",
+        id: "03",
         title: "Pixel Junkie Creative Studio",
         role: "Web design and development",
         tools: "React, Tailwind CSS, Figma",
@@ -21,7 +29,7 @@ const projects = [
         link: "https://pixeljunkiestudio.in",
     },
     {
-        id: "03",
+        id: "04",
         title: "Internship Project",
         role: "Web development",
         tools: "HTML, CSS, ",
@@ -29,14 +37,14 @@ const projects = [
         link: "https://front-end-website-1.vercel.app/",
     },
     {
-        id: "04",
+        id: "05",
         title: "Blood Bank Donation Management System",
         role: "College Project",
         tools: "PHP, Javascript, CSS",
         img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/BBDMS.jpg",
     },
     {
-        id: "05",
+        id: "06",
         title: "Weather App",
         role: "Web Project",
         tools: "Javascript, HTML, CSS",
@@ -44,7 +52,7 @@ const projects = [
         link: "https://weather-app-coral-seven-64.vercel.app/",
     },
     {
-        id: "06",
+        id: "07",
         title: "QR Code Generator",
         role: "Web Project",
         tools: "Javascript, HTML, CSS",

@@ -9,7 +9,7 @@ const icons = [
 	{ name: "Node.js", src: "/nodejs.svg" },
 	{ name: "Firebase", src: "/firebase.svg" },
 	{ name: "Vite", src: "/vite.svg" },
-	{ name: "Express.js", src: "/Express.svg" },
+	{ name: "Express.js", src: "/express.png" },
 	{ name: "MongoDB", src: "/MongoDB.svg" },
 	{ name: "Python", src: "/Python.svg" },
 	{ name: "C#", src: "/C.svg" },

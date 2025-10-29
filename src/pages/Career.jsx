@@ -36,6 +36,14 @@ const experiences = [
         description:
             "Collaborated with clients to design intuitive UI/UX experiences in Figma and develop responsive frontends using React and Tailwind CSS. Delivered branding assets, interactive prototypes, and modern web interfaces while actively upskilling in design systems, accessibility, and advanced frontend frameworks.",
     },
+    {
+        year: "NOW",
+        role: "Freelance & Upskilling",
+        company: "Pixel Junkie Creative Studio",
+        description:
+            "Working as a freelancer at Pixel Junkie Creative Studio, collaborating with clients to design intuitive UI/UX experiences in Figma and develop responsive frontends using React and Tailwind CSS. Delivered branding assets, interactive prototypes, and modern web interfaces while actively upskilling in design systems, accessibility, and advanced frontend frameworks.",
+    }
+
 ];
 
 export default function Career() {
@@ -130,9 +138,10 @@ export default function Career() {
                                 opacity: scrollProgress > i * 0.25 ? 1 : 0,
                                 y: scrollProgress > i * 0.25 ? 0 : 50,
                             }}
-                            transition={{ duration: 0.6 }}
+                            transition={{ duration: 0.5 }}
                             className="text-gray-300"
                         >
+                            <div className="text-sm text-purple-400 mb-1">{exp.year}</div>
                             <h3 className="text-xl font-bold mb-1">{exp.role}</h3>
                             <div className="text-purple-400 mb-2">{exp.company}</div>
                             <p className="text-sm">{exp.description}</p>
@@ -155,6 +164,7 @@ export default function Career() {
                             }}
                             transition={{ duration: 0.6 }}
                         >
+                            <div className="text-lg text-purple-400 mb-1">{exp.year}</div>
                             <h3 className="text-4xl font-bold">{exp.role}</h3>
                             <p className="text-purple-400">{exp.company}</p>
                         </motion.div>
