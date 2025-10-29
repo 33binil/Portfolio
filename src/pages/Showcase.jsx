@@ -9,7 +9,7 @@ const projects = [
         title: "Randell's Harvest - Omniblend",
         role: "Web Project/E-Commerce/(# In Progress)",
         tools: "React, Sql, Python, Firebase, Google Auth",
-        img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/diary-2.jpg",
+        img: "https://github.com/33binil/Portfolio/blob/main/public/img/omniblend.png",
         link: "https://omniblend-v2-1.vercel.app/",
     },
     {
