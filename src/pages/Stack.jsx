@@ -15,7 +15,7 @@ const icons = [
 	{ name: "C#", src: "/C.svg" },
 	{ name: "Git", src: "/Git.svg" },
 	{ name: "MySQL", src: "/MySQL.svg" },
-	{ name: "BootStrap", src: "/Bootstrap.svg" },
+	{ name: "BootStrap", src: "/bootstrap.png" },
 	{ name: "Figma", src: "/Figma.svg" },
 
 ];
